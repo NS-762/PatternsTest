@@ -1,4 +1,4 @@
-package com.example.patternstest.factoryMethod
+package com.example.patternstest.factory_method
 
 import android.util.Log
 

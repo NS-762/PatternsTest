@@ -1,4 +1,4 @@
-package com.example.patternstest.factoryMethod
+package com.example.patternstest.factory_method
 
 class WoodHouseFactory: HouseFactory {
     override fun createHouse(): House {

@@ -3,12 +3,22 @@ package com.example.patternstest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.patternstest.bridge.BankSystem
+import com.example.patternstest.bridge.CppDeveloper
+import com.example.patternstest.bridge.JavaDeveloper
+import com.example.patternstest.bridge.SecuritySystem
 import com.example.patternstest.chain_of_responsibility.Handler1
 import com.example.patternstest.chain_of_responsibility.Handler2
 import com.example.patternstest.chain_of_responsibility.Handler3
 import com.example.patternstest.mediator.*
 import com.example.patternstest.state.LiquidState
 import com.example.patternstest.state.Water
+import com.example.patternstest.strategy.Car
+import com.example.patternstest.strategy.ElectricMove
+import com.example.patternstest.strategy.PetrolMove
+import com.example.patternstest.visitor.JuniorDeveloper
+import com.example.patternstest.visitor.Project
+import com.example.patternstest.visitor.SeniorDeveloper
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,5 +107,22 @@ class MainActivity : AppCompatActivity() {
         water.frost()
         water.heat()
         water.heat()*/
+
+/*        //Strategy
+        val car = Car(ElectricMove())
+        car.move()
+        car.movable = PetrolMove()
+        car.move()*/
+
+/*        //Visitor
+        val project = Project()
+        project.create(JuniorDeveloper())
+        project.create(SeniorDeveloper())*/
+
+/*        //Bridge
+        val bankSystem = BankSystem(JavaDeveloper()) // Можно поменять разработчиков местами
+        bankSystem.createProject()
+        val securitySystem = SecuritySystem(CppDeveloper())
+        securitySystem.createProject()*/
     }
 }
